@@ -1,21 +1,282 @@
-
+/* ----------------------------------------------------------
+   Grundfarben und Basis
+---------------------------------------------------------- */
 :root {
-  --green: #1B7F5C;
-  --green-dark: #125C43;
-  --green-light: #E6F2EE;
+  --accent: #385D8A;
+  --accent-dark: #283C5D;
+  --accent-light: #E6EDF6;
   --text: #1a1a1a;
 }
-* { box-sizing: border-box; }
-html, body { margin:0; padding:0; font-family: Arial, Helvetica, sans-serif; color: var(--text); }
-header { border-top: 6px solid var(--green); padding: 24px; }
-header .brand { display:flex; align-items:center; gap:16px; }
-header img.logo { width:72px; height:auto; }
-h1 { margin:0; font-size: 28px; color: var(--green-dark); }
-h2 { margin: 24px 0 8px; font-size: 20px; color: var(--green); }
-main { padding: 24px; max-width: 980px; margin: 0 auto; }
-.cta { margin-top: 16px; display:inline-block; padding:10px 16px; border:1px solid var(--green); color: var(--green-dark); text-decoration:none; border-radius:8px; }
-footer { background: var(--green-light); padding: 18px 24px; margin-top: 40px; font-size: 14px; }
-nav a { margin-right:16px; text-decoration:none; color: var(--green-dark); }
-.small { font-size: 14px; color:#666; }
-ul.bul { padding-left: 18px; }
-.hr { height:1px; background:#ddd; margin: 16px 0; }
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background-color: #ffffff;
+}
+
+/* ----------------------------------------------------------
+   Header, Branding, Navigation
+---------------------------------------------------------- */
+header {
+  border-top: 6px solid var(--accent);
+  padding: 24px 24px 16px;
+}
+
+header .brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+header img.logo {
+  width: 144px;
+  height: auto;
+}
+
+/* DEKRA-Siegel rechts im Header */
+.dekra-siegel {
+  height: 200px;         /* bei Bedarf anpassen (z.B. 160px) */
+  width: auto;           /* hält das Original-Seitenverhältnis */
+  margin-left: 64px;
+}
+
+header .brand-text {
+  flex: 1;
+}
+
+header .brand-text h1 {
+  margin: 0;
+  font-size: 28px;
+  color: var(--accent-dark);
+}
+
+header .brand-text .small {
+  margin-bottom: 4px;
+}
+
+header .tagline {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+/* Navigation */
+nav {
+  max-width: 980px;
+  margin: 16px auto 0;
+}
+
+nav a {
+  margin-right: 16px;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--accent-dark);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------------------
+   Hauptbereich & Typografie
+---------------------------------------------------------- */
+main {
+  padding: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0;
+  color: var(--accent-dark);
+}
+
+h2 {
+  margin: 24px 0 8px;
+  font-size: 20px;
+  color: var(--accent);
+}
+
+h3 {
+  margin: 16px 0 4px;
+  font-size: 16px;
+  color: var(--accent-dark);
+}
+
+p {
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+/* Links allgemein */
+a {
+  color: var(--accent-dark);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Call-to-Action Button */
+.cta {
+  margin-top: 8px;
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.cta:hover {
+  background-color: var(--accent-dark);
+}
+
+/* Kleine Hilfsklassen */
+.small {
+  font-size: 14px;
+  color: #666666;
+}
+
+.hr {
+  height: 1px;
+  background: #dddddd;
+  margin: 16px 0;
+}
+
+/* ----------------------------------------------------------
+   Leistungen – aufklappbare Blöcke (Accordion)
+---------------------------------------------------------- */
+
+.service-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0 0;
+}
+
+.service-item {
+  border-top: 1px solid #ddd;
+}
+
+.service-item:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Abstand pro Block */
+.service-details {
+  padding: 4px 0;
+}
+
+/* Überschriftzeile – klickbar, bleibt fett */
+.service-summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Standard-Dreieck ausblenden (Chrome, Safari etc.) */
+.service-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Plus/Minus-Symbol rechts */
+.service-summary::after {
+  content: "+";
+  font-weight: normal;
+  margin-left: 12px;
+  font-size: 18px;
+}
+
+.service-details[open] .service-summary::after {
+  content: "–";
+}
+
+/* Text im aufgeklappten Bereich */
+.service-details p {
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Grundstil für alle <details>/<summary>, falls woanders genutzt */
+details {
+  margin: 6px 0;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* kleiner Abstand unter der Überschrift, wenn geöffnet */
+details[open] summary {
+  margin-bottom: 4px;
+}
+
+/* Text direkt darunter ohne zusätzlichen oberen Rand */
+details[open] p {
+  margin-top: 0;
+}
+
+/* ----------------------------------------------------------
+   Footer
+---------------------------------------------------------- */
+footer {
+  background: var(--accent-light);
+  padding: 18px 24px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--accent-dark);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------------------
+   Responsive Anpassungen
+---------------------------------------------------------- */
+@media (max-width: 640px) {
+  header {
+    padding: 16px;
+  }
+
+  header .brand {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .dekra-siegel {
+    height: 140px;    /* auf kleineren Geräten etwas kleiner */
+  }
+
+  main {
+    padding: 16px;
+  }
+}
