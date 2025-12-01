@@ -280,3 +280,54 @@ footer a:hover {
     padding: 16px;
   }
 }
+
+/* Formular auf der Kontaktseite */
+#callback-form {
+  max-width: 480px;
+}
+/* ----------------------------------------------------------
+   Kontakt Seite
+---------------------------------------------------------- */
+
+#callback-form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+#callback-form input,
+#callback-form select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#callback-form button {
+  margin-top: 16px;
+}
+
+/* ----------------------------------------------------------
+   Haupt-CTA-Stil für Links UND Buttons
+---------------------------------------------------------- */
+
+a.cta,
+button.cta {
+  margin-top: 8px;
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;          /* Standard-Button-Rand entfernen */
+  cursor: pointer;
+}
+
+a.cta:hover,
+button.cta:hover {
+  background-color: var(--accent-dark);
+}

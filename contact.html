@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt – Sachverständigenbüro Christoph Schön</title>
+  <meta name="description" content="Kontakt zum Sachverständigenbüro Christoph Schön – Sachverständiger DEKRA zertifiziert für Bauschäden. Rückrufbitte oder Anfrage per E-Mail.">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+  function prepareCallbackMail(event) {
+    event.preventDefault();
+
+    const reason = document.getElementById('reason').value;
+    const name   = document.getElementById('name').value.trim();
+    const phone  = document.getElementById('phone').value.trim();
+    const time   = document.getElementById('time').value.trim();
+
+    const subject = 'Rueckrufwunsch';
+
+    let body  = 'Rueckrufwunsch\n\n';
+    body += 'Grund: ' + reason + '\n';
+    body += 'Name: ' + name + '\n';
+    body += 'Telefon: ' + phone + '\n';
+    if (time) {
+      body += 'Erreichbar: ' + time + '\n';
+    }
+
+    const mailto =
+      'mailto:svbuero.schoen@outlook.de'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailto;
+  }
+</script>
+
+<body>
+  <header>
+    <div class="brand">
+      <img class="logo" src="assets/logo.png" alt="Logo Sachverständigenbüro Christoph Schön">
+      <div class="brand-text">
+        <div class="small">Sachverständigenbüro Christoph Schön</div>
+        <h1>Sachverständiger DEKRA zertifiziert für Bauschäden</h1>
+        <p class="tagline">
+          Feststellen · Bewerten · Gutachten
+        </p>
+      </div>
+      <img src="assets/dekra-siegel.png"
+           alt="DEKRA zertifiziert – Bauschaden-Sachverständiger"
+           class="dekra-siegel">
+    </div>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="preise.html">Preise</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+
+      <p>
+        <strong>Sachverständigenbüro Christoph Schön</strong><br>
+        Sachverständiger DEKRA zertifiziert für Bauschäden – Christoph Schön<br>
+        Stadtweg&nbsp;1<br>
+        27308 Kirchlinteln
+      </p>
+
+      <p>
+        Mobil: <a href="tel:+4915221473710">+49&nbsp;1522&nbsp;147&nbsp;371&nbsp;0</a><br>
+        E-Mail: <a href="mailto:svbuero.schoen@outlook.de">svbuero.schoen@outlook.de</a>
+      </p>
+      <p>
+       <a class="cta" href="tel:+4915221473710">Jetzt anrufen</a>
+       </a>
+      </p>
+
+      <h3>Direkte Anfrage per E-Mail</h3>
+      <p>
+        Für eine erste Einschätzung schildern Sie mir kurz das Schadensbild
+        (Ort am Gebäude, grobe Beschreibung, Fotos wenn möglich).
+      </p>
+      <p>
+        <a class="cta"
+           href="mailto:svbuero.schoen@outlook.de?subject=Anfrage%20Bauschadenbewertung">
+          E-Mail senden
+        </a>
+      </p>
+
+<section id="rueckruf">
+  <h2>Rückruf anfragen</h2>
+
+  <p>
+    Wenn Sie einen Rückruf wünschen, können Sie mir hier kurz den Grund,
+    Ihren Namen und Ihre Telefonnummer übermitteln. Es öffnet sich eine E-Mail,
+    die Sie nur noch absenden müssen.
+  </p>
+
+  <form id="callback-form" onsubmit="prepareCallbackMail(event)">
+    <label for="reason">Grund für den Rückruf</label>
+    <select id="reason" name="reason" required>
+      <option value="">Bitte wählen …</option>
+  <option value="Bestandsaufnahme_Dokumentation">
+    Bestandsaufnahme und Dokumentation
+  </option>
+
+  <option value="Analyse_Ursachenforschung">
+    Analyse und Ursachenforschung
+  </option>
+
+  <option value="Erstellung_Gutachten">
+    Erstellung des Gutachtens
+  </option>
+
+  <option value="Kostenkalkulation">
+    Kostenkalkulation
+  </option>
+
+  <option value="Sanierungs_Instandsetzungskonzepte">
+    Sanierungs- und Instandsetzungskonzepte
+  </option>
+
+  <option value="Beweissicherung">
+    Beweissicherung
+  </option>
+
+  <option value="Bauteiloeffnung">
+    Bauteilöffnung
+  </option>
+
+  <option value="Invasive_zerstoerende_Pruefungen">
+    Invasive / zerstörende Prüfungen
+  </option>
+
+  <option value="Variantenvergleich_Sanierungskonzepte">
+    Variantenvergleich Sanierungskonzepte
+  </option>
+
+  <option value="Kurzprotokolle_Versicherung_Gewaehrleistung">
+    Kurzprotokolle für Versicherung / Gewährleistung
+  </option>
+
+  <option value="Kaufbegleitung">
+    Kaufbegleitung
+  </option>
+
+  <option value="Sonstiger_Bauschaden">
+    Sonstiger Bauschaden
+  </option>
+</select>
+
+    <label for="name">Ihr Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Telefonnummer für Rückruf</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="time">Wann darf ich Sie am besten erreichen?</label>
+    <input type="text" id="time" name="time" placeholder="z. B. werktags 17–19 Uhr">
+
+    <button type="submit" class="cta">Rückruf anfragen</button>
+  </form>
+
+  <p class="small">
+    Hinweis: Der Button öffnet Ihr E-Mail-Programm mit einer vorbereiteten Nachricht.
+  </p>
+</section>
+      <p class="small">
+        Hinweis: Durch das Senden einer E-Mail erklären Sie sich damit einverstanden,
+        dass Ihre Angaben zur Bearbeitung der Anfrage verarbeitet werden (siehe
+        <a href="datenschutz.html">Datenschutz</a>).
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Sachverständigenbüro Christoph Schön ·
+    <a href="impressum.html">Impressum</a> ·
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
+</html>
