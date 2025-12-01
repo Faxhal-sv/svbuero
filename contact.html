@@ -10,33 +10,6 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-  function prepareCallbackMail(event) {
-    event.preventDefault();
-
-    const reason = document.getElementById('reason').value;
-    const name   = document.getElementById('name').value.trim();
-    const phone  = document.getElementById('phone').value.trim();
-    const time   = document.getElementById('time').value.trim();
-
-    const subject = 'Rueckrufwunsch';
-
-    let body  = 'Rueckrufwunsch\n\n';
-    body += 'Grund: ' + reason + '\n';
-    body += 'Name: ' + name + '\n';
-    body += 'Telefon: ' + phone + '\n';
-    if (time) {
-      body += 'Erreichbar: ' + time + '\n';
-    }
-
-    const mailto =
-      'mailto:svbuero.schoen@outlook.de'
-      + '?subject=' + encodeURIComponent(subject)
-      + '&body=' + encodeURIComponent(body);
-
-    window.location.href = mailto;
-  }
-</script>
 
 <body>
   <header>
@@ -101,73 +74,49 @@
     die Sie nur noch absenden müssen.
   </p>
 
-  <form id="callback-form" onsubmit="prepareCallbackMail(event)">
-    <label for="reason">Grund für den Rückruf</label>
-    <select id="reason" name="reason" required>
-      <option value="">Bitte wählen …</option>
-  <option value="Bestandsaufnahme_Dokumentation">
-    Bestandsaufnahme und Dokumentation
-  </option>
+<form id="callback-form"
+      action="https://www.formpost.eu/f/f4c13d8c"
+      method="POST">
 
-  <option value="Analyse_Ursachenforschung">
-    Analyse und Ursachenforschung
-  </option>
+  <label for="reason">Grund für den Rückruf</label>
+  <select id="reason" name="reason" required>
+    <option value="">Bitte wählen …</option>
+    <option value="Bestandsaufnahme_Dokumentation">Bestandsaufnahme und Dokumentation</option>
+    <option value="Analyse_Ursachenforschung">Analyse und Ursachenforschung</option>
+    <option value="Erstellung_Gutachten">Erstellung des Gutachtens</option>
+    <option value="Kostenkalkulation">Kostenkalkulation</option>
+    <option value="Sanierungs_Instandsetzungskonzepte">Sanierungs- und Instandsetzungskonzepte</option>
+    <option value="Beweissicherung">Beweissicherung</option>
+    <option value="Bauteiloeffnung">Bauteilöffnung</option>
+    <option value="Invasive_zerstoerende_Pruefungen">Invasive / zerstörende Prüfungen</option>
+    <option value="Variantenvergleich_Sanierungskonzepte">Variantenvergleich Sanierungskonzepte</option>
+    <option value="Kurzprotokolle_Versicherung_Gewaehrleistung">Kurzprotokolle für Versicherung / Gewährleistung</option>
+    <option value="Kaufbegleitung">Kaufbegleitung</option>
+    <option value="Sonstiger_Bauschaden">Sonstiger Bauschaden</option>
+  </select>
 
-  <option value="Erstellung_Gutachten">
-    Erstellung des Gutachtens
-  </option>
+  <label for="name">Ihr Name</label>
+  <input type="text" id="name" name="name" required>
 
-  <option value="Kostenkalkulation">
-    Kostenkalkulation
-  </option>
+  <label for="phone">Telefonnummer für Rückruf</label>
+  <input type="tel" id="phone" name="phone" required>
 
-  <option value="Sanierungs_Instandsetzungskonzepte">
-    Sanierungs- und Instandsetzungskonzepte
-  </option>
+  <label for="email">Ihre E-Mail-Adresse (optional)</label>
+  <input type="email" id="email" name="email">
 
-  <option value="Beweissicherung">
-    Beweissicherung
-  </option>
+  <label for="time">Wann darf ich Sie am besten erreichen?</label>
+  <input type="text" id="time" name="time" placeholder="z. B. werktags 17–19 Uhr">
 
-  <option value="Bauteiloeffnung">
-    Bauteilöffnung
-  </option>
+  <!-- Honeypot-Feld gegen Spam, wird vom Nutzer nicht ausgefüllt -->
+  <input type="text" name="_gotcha" style="display:none;">
 
-  <option value="Invasive_zerstoerende_Pruefungen">
-    Invasive / zerstörende Prüfungen
-  </option>
-
-  <option value="Variantenvergleich_Sanierungskonzepte">
-    Variantenvergleich Sanierungskonzepte
-  </option>
-
-  <option value="Kurzprotokolle_Versicherung_Gewaehrleistung">
-    Kurzprotokolle für Versicherung / Gewährleistung
-  </option>
-
-  <option value="Kaufbegleitung">
-    Kaufbegleitung
-  </option>
-
-  <option value="Sonstiger_Bauschaden">
-    Sonstiger Bauschaden
-  </option>
-</select>
-
-    <label for="name">Ihr Name</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="phone">Telefonnummer für Rückruf</label>
-    <input type="tel" id="phone" name="phone" required>
-
-    <label for="time">Wann darf ich Sie am besten erreichen?</label>
-    <input type="text" id="time" name="time" placeholder="z. B. werktags 17–19 Uhr">
-
-    <button type="submit" class="cta">Rückruf anfragen</button>
-  </form>
+  <button type="submit" class="cta">Rückruf anfragen</button>
+</form>
 
   <p class="small">
-    Hinweis: Der Button öffnet Ihr E-Mail-Programm mit einer vorbereiteten Nachricht.
+  Hinweis: Ihre Angaben werden über ein sicheres Formular an das
+  Sachverständigenbüro Christoph Schön übermittelt. Alternativ können Sie mich
+  jederzeit direkt telefonisch oder per E-Mail kontaktieren.
   </p>
 </section>
       <p class="small">
