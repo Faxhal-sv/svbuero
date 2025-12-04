@@ -3,21 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kontakt – Sachverständigenbüro Christoph Schön</title>
-  <meta name="description" content="Kontakt zum Sachverständigenbüro Christoph Schön – Sachverständiger DEKRA zertifiziert für Bauschäden. Rückrufbitte oder Anfrage per E-Mail.">
+
+  <!-- Seitentitel – pro Seite anpassen -->
+  <title>Kontakt | Bausachverständiger für Bauschäden in Verden & Umgebung</title>
+
+  <!-- Meta-Description – pro Seite anpassen -->
+  <meta name="description" content="Kontakt zum Bausachverständigen für Bauschäden im Raum Verden & Umgebung. Rückruf anfordern oder Feuchtigkeit, Schimmel, Risse und weitere Schäden direkt per E-Mail schildern.">
+
+  <!-- Favicons – Pfade wie bei dir im Projekt -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Zentrales Stylesheet mit deinen Farben/Schriften/Layout -->
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+
+  <!-- ================= HEADER / LOGO / NAV ================= -->
   <header>
     <div class="brand">
       <img class="logo" src="assets/logo.png" alt="Logo Sachverständigenbüro Christoph Schön">
       <div class="brand-text">
         <div class="small">Sachverständigenbüro Christoph Schön</div>
-        <h1>Sachverständiger DEKRA zertifiziert für Bauschäden</h1>
+        <h1>Bausachverständiger für Bauschäden in Verden &amp; Umgebung</h1>
         <p class="tagline">
           Feststellen · Bewerten · Gutachten
         </p>
@@ -26,18 +35,42 @@
            alt="DEKRA zertifiziert – Bauschaden-Sachverständiger"
            class="dekra-siegel">
     </div>
-    <nav>
-      <a href="index.html">Start</a>
-      <a href="leistungen.html">Leistungen</a>
-      <a href="preise.html">Preise</a>
-      <a href="contact.html">Kontakt</a>
+
+    <!-- Hauptnavigation mit Dropdown „Leistungen“ -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+
+        <li class="has-submenu">
+          <a href="leistungen.html">Leistungen</a>
+          <ul class="submenu">
+            <li><a href="gutachter-feuchtigkeit-schimmel.html">Feuchtigkeit &amp; Schimmel</a></li>
+            <li><a href="gutachter-risse-verformungen-setzungen.html">Risse, Verformungen &amp; Setzungen</a></li>
+            <li><a href="gutachter-dach-fassade-fenster.html">Dach, Fassade &amp; Fenster</a></li>
+            <li><a href="gutachter-keller-bodenplatte-abdichtung.html">Keller, Bodenplatte &amp; Abdichtung</a></li>
+            <li><a href="gutachter-innenraeume-estrich-ausbau.html">Innenräume, Estrich &amp; Ausbau</a></li>
+            <li><a href="gutachter-heizung-lueftung-haustechnik.html">Heizung, Lüftung &amp; Haustechnik (baufachliche Sicht)</a></li>
+            <li><a href="gutachter-waermeschutz-energieeffizienz-waermebruecken.html">Wärmeschutz, Energieeffizienz &amp; Wärmebrücken</a></li>
+            <li><a href="gutachter-aussenanlagen-anbauten-besondere-konstruktionen.html">Außenanlagen, Anbauten &amp; besondere Konstruktionen</a></li>
+            <li><a href="gutachter-hauskauf-immobilienkauf.html">Hauskauf / Immobilienkauf</a></li>
+            <li><a href="gutachter-gewaehrleistungsende-5-jahres-frist.html">Gewährleistungsende (5-Jahres-Frist)</a></li>
+            <li><a href="gutachter-sanierungsplanung-modernisierung.html">Sanierungsplanung / Modernisierung</a></li>
+          </ul>
+        </li>
+
+        <li><a href="preise.html">Honorar &amp; Kosten</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
     </nav>
   </header>
 
+  <!-- ================= HAUPTBEREICH / INHALT ================= -->
+
   <main>
     <section id="kontakt">
-      <h2>Kontakt</h2>
-
+      <h1>Kontakt – Unterstützung bei Bauschäden im Raum Verden</h1>
+      <p>
+      </p>
       <p>
         <strong>Sachverständigenbüro Christoph Schön</strong><br>
         Sachverständiger DEKRA zertifiziert für Bauschäden – Christoph Schön<br>
@@ -78,22 +111,22 @@
       action="https://www.formpost.eu/f/f4c13d8c"
       method="POST">
 
-  <label for="reason">Grund für den Rückruf</label>
-  <select id="reason" name="reason" required>
-    <option value="">Bitte wählen …</option>
-    <option value="Bestandsaufnahme_Dokumentation">Bestandsaufnahme und Dokumentation</option>
-    <option value="Analyse_Ursachenforschung">Analyse und Ursachenforschung</option>
-    <option value="Erstellung_Gutachten">Erstellung des Gutachtens</option>
-    <option value="Kostenkalkulation">Kostenkalkulation</option>
-    <option value="Sanierungs_Instandsetzungskonzepte">Sanierungs- und Instandsetzungskonzepte</option>
-    <option value="Beweissicherung">Beweissicherung</option>
-    <option value="Bauteiloeffnung">Bauteilöffnung</option>
-    <option value="Invasive_zerstoerende_Pruefungen">Invasive / zerstörende Prüfungen</option>
-    <option value="Variantenvergleich_Sanierungskonzepte">Variantenvergleich Sanierungskonzepte</option>
-    <option value="Kurzprotokolle_Versicherung_Gewaehrleistung">Kurzprotokolle für Versicherung / Gewährleistung</option>
-    <option value="Kaufbegleitung">Kaufbegleitung</option>
-    <option value="Sonstiger_Bauschaden">Sonstiger Bauschaden</option>
-  </select>
+<label for="reason">Grund für den Rückruf</label>
+<select id="reason" name="reason" required>
+<option value="">Bitte wählen …</option>
+<option value="Feuchtigkeit_Schimmel">Feuchtigkeit &amp; Schimmel</option>
+<option value="Risse_Verformungen_Setzungen">Risse, Verformungen &amp; Setzungen</option>
+<option value="Dach_Fassade_Fenster">Dach, Fassade &amp; Fenster</option>
+<option value="Keller_Bodenplatte_Abdichtung">Keller, Bodenplatte &amp; Abdichtung</option>
+<option value="Innenraeume_Estrich_Ausbau">Innenräume, Estrich &amp; Ausbau</option>
+<option value="Heizung_Lueftung_Haustechnik">Heizung, Lüftung &amp; Haustechnik (baufachliche Sicht)</option>
+<option value="Waermeschutz_Energieeffizienz_Waermebruecken">Wärmeschutz, Energieeffizienz &amp; Wärmebrücken</option>
+<option value="Aussenanlagen_Anbauten_besondere_Konstruktionen">Außenanlagen, Anbauten &amp; besondere Konstruktionen</option>
+<option value="Hauskauf_Immobilienkauf">Hauskauf / Immobilienkauf</option>
+<option value="Gewaehrleistungsende_5_Jahres_Frist">Gewährleistungsende (5-Jahres-Frist)</option>
+<option value="Sanierungsplanung_Modernisierung">Sanierungsplanung / Modernisierung</option>
+<option value="Sonstiger_Bauschaden">Sonstiger Bauschaden</option>
+</select>
 
   <label for="name">Ihr Name</label>
   <input type="text" id="name" name="name" required>
@@ -127,10 +160,45 @@
     </section>
   </main>
 
+  <!-- ================= FOOTER ================= -->
   <footer>
     © 2025 Sachverständigenbüro Christoph Schön ·
     <a href="impressum.html">Impressum</a> ·
     <a href="datenschutz.html">Datenschutz</a>
   </footer>
+
+  <!-- ================= COOKIE-BANNER ================= -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-banner-inner">
+      <p>
+        Diese Website verwendet ausschließlich technisch notwendige Technologien
+        für den sicheren Betrieb der Seite. Es findet kein Tracking zu Werbe-
+        oder Analysezwecken statt.
+        Nähere Informationen finden Sie in der
+        <a href="datenschutz.html">Datenschutzerklärung</a>.
+      </p>
+      <button id="cookie-accept">OK</button>
+    </div>
+  </div>
+
+  <!-- ================= SCRIPT FÜR COOKIE-BANNER ================= -->
+  <script>
+    (function () {
+      const banner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('cookie-accept');
+
+      // Wenn der Nutzer bereits zugestimmt hat, Banner ausblenden
+      if (localStorage.getItem('cookieAccepted') === 'true') {
+        banner.style.display = 'none';
+      }
+
+      // Klick auf "OK" speichert Zustimmung und blendet Banner aus
+      acceptBtn.addEventListener('click', function () {
+        localStorage.setItem('cookieAccepted', 'true');
+        banner.style.display = 'none';
+      });
+    })();
+  </script>
+
 </body>
 </html>
